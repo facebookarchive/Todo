@@ -6,7 +6,7 @@
     <link href="css/todos.css" media="all" rel="stylesheet" type="text/css"/>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="js/underscore-1.1.6.js"></script>
-    <script src="//www.parsecdn.com/js/parse-1.0.0.min.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.0.18.min.js"></script>
     <script src="js/todos.js"></script>
   </head>
 
@@ -90,13 +90,13 @@
 	<span id="todo-count"><strong><%= remaining %></strong> <%= remaining == 1 ? 'item' : 'items' %> left</span>
 	<ul id="filters">
 	  <li>
-	    <a class="selected all" href="#/">All</a>
+	    <a href="javascript:void(0)" id="all" class="selected">All</a>
 	  </li>
 	  <li>
-	    <a href="#/active" class="active">Active</a>
+	    <a href="javascript:void(0)" id="active">Active</a>
 	  </li>
 	  <li>
-	    <a href="#/completed" class="completed">Completed</a>
+	    <a href="javascript:void(0)" id="completed">Completed</a>
 	  </li>
 	</ul>
 	<button id="clear-completed">Clear completed (<%= done %>)</button>
