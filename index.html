@@ -53,7 +53,7 @@
 
     <script type="text/template" id="manage-todos-template">
       <div id="user-info">
-        Signed in as <%= Parse.User.current().get("username") %> (<a href="#" class="log-out">Log out</a>)
+        Signed in as <%= Parse.User.current().escape("username") %> (<a href="#" class="log-out">Log out</a>)
       </div>
 
       <div class="section">
