@@ -5,7 +5,7 @@
     <title>Parse JavaScript Todo App</title>
     <link href="css/todos.css" media="all" rel="stylesheet" type="text/css"/>
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script src="js/underscore-1.1.6.js"></script>
+    <script src="js/underscore.js"></script>
     <script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
     <script src="js/todos.js"></script>
   </head>
@@ -79,10 +79,10 @@
       <li class="<%= done ? 'completed' : '' %>">
 	<div class="view">
 	  <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %>>
-	  <label class="todo-content"><%= content %></label>
+	  <label class="todo-content"><%= _.escape(content) %></label>
 	  <button class="todo-destroy"></button>
 	</div>
-	<input class="edit" value="<%= content %>">
+	<input class="edit" value="<%= _.escape(content) %>">
       </li>
     </script>
 
