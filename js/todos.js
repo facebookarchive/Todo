@@ -7,8 +7,8 @@ $(function() {
   Parse.$ = jQuery;
 
   // Initialize Parse with your Parse application javascript keys
-  Parse.initialize("0Oq3tTp9JMvd72LOrGN25PiEq9XgVHCxo57MQbpT",
-                   "vUFy2o7nFx3eeKVlZneYMPI2MBoxT5LhWNoIWPja");
+  Parse.initialize("your-application-id",
+                   "your-javascript-key");
 
   // Todo Model
   // ----------
@@ -319,7 +319,7 @@ $(function() {
 
         error: function(user, error) {
           self.$(".login-form .error").html("Invalid username or password. Please try again.").show();
-          this.$(".login-form button").removeAttr("disabled");
+          self.$(".login-form button").removeAttr("disabled");
         }
       });
 
@@ -341,8 +341,8 @@ $(function() {
         },
 
         error: function(user, error) {
-          self.$(".signup-form .error").html(error.message).show();
-          this.$(".signup-form button").removeAttr("disabled");
+          self.$(".signup-form .error").html(_.escape(error.message)).show();
+          self.$(".signup-form button").removeAttr("disabled");
         }
       });
 
